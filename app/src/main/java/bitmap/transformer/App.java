@@ -41,25 +41,25 @@ public class App {
 //        break;
 //    }
 
-    String  path=args[0];
-    String  output=args[1];
-    String  transform=args[2];
+    String path = args[0];
+    String output = args[1];
+    String transform = args[2];
 
-    BitMap  newImage= new BitMap(path);
+    BitMap newImage = new BitMap(path);
 
     switch (transform) {
-     case "1":
-       newImage.convertBlackAndWhite();
-       newImage.saveImage(output);
-       break;
-     case "2":
-       newImage.invert();
-       newImage.saveImage(output);
-       break;
-     default:
-       System.out.println("there's no any change");
-       break;
-   }
+      case "1":
+        newImage.convertBlackAndWhite();
+        newImage.saveImage(output);
+        break;
+      case "2":
+        newImage.invert();
+        newImage.saveImage(output);
+        break;
+      default:
+        System.out.println("there's no any change");
+        break;
+    }
 
 
   }
