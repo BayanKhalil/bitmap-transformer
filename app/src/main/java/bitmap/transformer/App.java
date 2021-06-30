@@ -18,15 +18,15 @@ public class App {
 
   public static void main(String[] args) {
 
-    String path = "/home/mkabumattar/amman-code-java-401d2/bitmap-transformer/app/src/main/resources/download.png";
-
-    BitMap newImage = new BitMap(path);
-//    String outpot = args[1];
-
-    newImage.invert();
-    String imagePath = "bitmap/";
-    String imageName = "name.jpg";
-    newImage.saveImage((imagePath + imageName));
+//    String path = "/home/mkabumattar/amman-code-java-401d2/bitmap-transformer/app/src/main/resources/download.png";
+//
+//    BitMap newImage = new BitMap(path);
+////    String outpot = args[1];
+//
+//    newImage.invert();
+//    String imagePath = "bitmap/";
+//    String imageName = "name.jpg";
+//    newImage.saveImage((imagePath + imageName));
 
 //    switch (args[2]) {
 //      case "1":
@@ -40,6 +40,26 @@ public class App {
 //      default:
 //        break;
 //    }
+
+    String  path=args[0];
+    String  output=args[1];
+    String  transform=args[2];
+
+    BitMap  newImage= new BitMap(path);
+
+    switch (transform) {
+     case "1":
+       newImage.convertBlackAndWhite();
+       newImage.saveImage(output);
+       break;
+     case "2":
+       newImage.invert();
+       newImage.saveImage(output);
+       break;
+     default:
+       System.out.println("there's no any change");
+       break;
+   }
 
 
   }
