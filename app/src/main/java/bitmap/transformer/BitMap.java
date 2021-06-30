@@ -12,8 +12,6 @@ import java.util.concurrent.Callable;
 
 public class BitMap {
 
-
-  public String path;
   public BufferedImage image;
   public int height;
   public int width;
